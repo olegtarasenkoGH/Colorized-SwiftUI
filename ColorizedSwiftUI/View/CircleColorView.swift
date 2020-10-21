@@ -9,9 +9,9 @@ import SwiftUI
 
 struct CircleColorView: View {
     
-    var red: Double
-    var green: Double
-    var blue: Double
+    @Binding var red: Double
+    @Binding var green: Double
+    @Binding var blue: Double
     
     var body: some View {
         Circle()
@@ -20,12 +20,12 @@ struct CircleColorView: View {
             .foregroundColor(Color(red: red/255, green: green/255, blue: blue/255))
             .overlay(Circle().stroke(Color.white, lineWidth: 7))
             .shadow(radius: 10)
-           
+        
     }
 }
-
-struct CircleColorView_Previews: PreviewProvider {
-    static var previews: some View {
-        CircleColorView(red: 0.0, green: 0.0, blue: 0.0)
-    }
-}
+//
+//struct CircleColorView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CircleColorView(red: 0.0, green: 0.0, blue: 0.0)
+//    }
+//}

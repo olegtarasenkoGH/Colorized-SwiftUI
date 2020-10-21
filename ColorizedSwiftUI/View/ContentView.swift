@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    
     @State private var colorValueRed = 0.0
     @State private var colorValueGreen = 0.0
     @State private var colorValueBlue = 0.0
@@ -22,9 +22,9 @@ struct ContentView: View {
         
         VStack {
             
-            CircleColorView(red: colorValueRed, green: colorValueGreen, blue: colorValueBlue)
-            .padding(50)
-        
+            CircleColorView(red: $colorValueRed, green: $colorValueGreen, blue: $colorValueBlue)
+                .padding(50)
+            
             VStack(alignment: .center, spacing: 25, content: {
                 
                 ColorSliderView(value: $colorValueRed, numberValue: $numberValueR, textColor: .red)

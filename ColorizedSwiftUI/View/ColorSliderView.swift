@@ -40,6 +40,7 @@ struct ColorSliderView: View {
         
         
         HStack {
+            
             Text("0").foregroundColor(textColor).bold()
             Slider(value: $value, in: 0 ... 255, step: 1.00).accentColor(textColor)
             
